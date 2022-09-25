@@ -1,10 +1,13 @@
 <template>
   <b-container>
-    <ul class="cards">
-      <li v-for="prestation in listPrestations" :key="prestation.id">
-        <prestationCard :prestation="prestation" />
-      </li>
-    </ul>
+    <b-row>
+      <prestationCard
+        v-for="prestation in listPrestations"
+        :key="prestation.id"
+        :prestation="prestation"
+        class="m-4"
+      />
+    </b-row>
   </b-container>
 </template>
 

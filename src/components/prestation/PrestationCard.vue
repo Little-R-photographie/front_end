@@ -1,28 +1,30 @@
 <template>
-  <span class="cardComponent">
-    <span class="card" v-on:click="redirectdiontPagePrestation(prestation.id)">
-      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-            <path />
-          </svg>
-          <img
-            class="card__thumb"
-            src="https://i.imgur.com/7D7I6dI.png"
-            alt=""
-          />
-          <div class="card__header-text">
-            <h3 class="card__title">{{ prestation.nom }}</h3>
-            <span class="card__status">{{ prestation.prix }} €</span>
-          </div>
-        </div>
-        <p class="card__description">
-          {{ prestation.description }}
-        </p>
-      </div>
-    </span>
-  </span>
+  <b-card
+    :title="prestation.nom"
+    :img-src="prestation.illustration"
+    img-alt="Image"
+    img-top
+    tag="article"
+    style="max-width: 20rem"
+    class="mb-2"
+  >
+    <b-card-text>
+      <span v-on:click="redirectdiontPagePrestation(prestation.id)">{{
+        prestation.nom
+      }}</span>
+      <br />
+      <span v-on:click="redirectdiontPagePrestation(prestation.id)">
+        {{ prestation.accroche }}
+      </span>
+    </b-card-text>
+
+    <b-button
+      v-on:click="redirectdiontPagePrestation(prestation.id)"
+      href="#"
+      variant="primary"
+      >Plus de détails</b-button
+    >
+  </b-card>
 </template>
 
 <script>

@@ -2,10 +2,13 @@
   <div v-if="prestation && id">
     <h1>{{ prestation.nom }}</h1>
     <ul>
-      <li>Id : {{ prestation.id }}</li>
       <li>Nom : {{ prestation.nom }}</li>
       <li>Description : {{ prestation.description }}</li>
-      <li>Prix : {{ prestation.prix }} €</li>
+      <li>Prix : {{ prestation.tarif }} €</li>
+      <li>Poste traitement : {{ prestation.post_traitement }}</li>
+      <li>Lieux : {{ prestation.lieuDuShooting }}</li>
+      <li>Durée : {{ prestation.dureeEnMinutes }} Min</li>
+      <li>Lieux : {{ prestation.lieu_du_shooting }}</li>
     </ul>
   </div>
 </template>
