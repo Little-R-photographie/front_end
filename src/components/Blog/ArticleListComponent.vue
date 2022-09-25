@@ -1,5 +1,5 @@
 <template>
-  <span v-on:click="redirectdiontPageArticle(prestation.id)">
+  <span v-on:click="redirectdiontPageArticle(article.id)">
     <span> {{ article.id }} </span> <br />
     <span> {{ article.titre }} </span> <br />
     <span> {{ article.contenu }} </span> <br />
@@ -21,7 +21,7 @@ export default {
   methods: {
     redirectdiontPageArticle(id) {
       this.id = id;
-      router.push({ name: "prestation", params: { id: id } });
+      router.push({ name: "article", params: { id: id } });
     },
   },
 };

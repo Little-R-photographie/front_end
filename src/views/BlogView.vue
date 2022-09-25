@@ -25,12 +25,7 @@ export default {
     appelListeDeToutsLesToutLesArticles() {
       axios
         .get("http://127.0.0.1:8000/api/articles")
-        .then(
-          (response) => (
-            console.log(response.data["hydra:member"]),
-            (this.listArticles = response.data["hydra:member"])
-          )
-        )
+        .then((response) => (this.listArticles = response.data["hydra:member"]))
         .catch(function (error) {
           console.log(error);
         });

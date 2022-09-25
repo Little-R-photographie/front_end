@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="prestation && id">
     <h1>{{ prestation.nom }}</h1>
     <ul>
       <li>Id : {{ prestation.id }}</li>
@@ -18,12 +18,12 @@ export default {
 
   data() {
     return {
-      prestation: "",
-      id: "",
+      prestation: null,
+      id: null,
     };
   },
   methods: {
-    appelPrestationUniqu() {
+    appelPrestationUnique() {
       axios
         .get(`http://127.0.0.1:8000/api/prestations/+${this.$route.params.id}`)
         .then((response) => (this.prestation = response.data))
@@ -37,7 +37,7 @@ export default {
   },
   mounted() {
     this.idDynamique();
-    this.appelPrestationUniqu();
+    this.appelPrestationUnique();
   },
 };
 </script>
