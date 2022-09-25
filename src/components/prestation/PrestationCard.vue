@@ -33,12 +33,12 @@ export default {
   props: ["prestation"],
   data() {
     return {
-      testClick: "clique marche",
+      id: null,
     };
   },
   methods: {
     redirectdiontPagePrestation(id) {
-      this.testClick = id;
+      this.id = id;
       router.push({ name: "prestation", params: { id: id } });
     },
   },

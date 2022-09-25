@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/mon-compte">Mon Compte</router-link> |
       <router-link to="/a-propose">A propos</router-link> |
-      <router-link to="/connexion">Connexion</router-link>
+      <router-link to="/connexion">Connexion</router-link> |
+      <router-link to="/blog">Blog</router-link>
     </nav>
     <router-view />
   </div>
